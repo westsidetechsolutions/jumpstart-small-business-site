@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+body {
+  font-family: 'Inter Variable', sans-serif;
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(#669999))
+      )
+      rgb(var(#186666));
+}
+
+nav {
+  @apply font-header;
+}
+
+h1 {
+  @apply text-4xl font-bold mb-4 font-header;
+}
+h2 {
+  @apply text-3xl font-bold mb-4 font-header;
+}
+h3 {
+  @apply text-2xl font-bold mb-4 font-header;
+}
+h4 {
+  @apply text-xl mb-4;
+}
+h5 {
+  @apply text-lg mb-4;
+}
+h6 {
+  @apply text-base mb-4;
+}
+p {
+  @apply text-base mb-4;
+}
+
+section {
+  max-width: 68.75rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.material-symbols-rounded {
+  font-family: "Material Symbols Rounded";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
