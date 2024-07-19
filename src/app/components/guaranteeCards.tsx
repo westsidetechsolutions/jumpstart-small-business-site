@@ -44,7 +44,7 @@ const guarantees = [
 const Guarantees = () => {
     return (
         <>
-            <h2 className="text-3xl font-bold mb-6">My Guarantees to You</h2>
+            <h2 className="text-primary">My Guarantees to You</h2>
             <p className="mb-12">I stand by the quality and effectiveness of these services. Here are my promises to ensure your satisfaction and peace of mind.</p>
             <div className="flex flex-wrap justify-center gap-8">
                 {guarantees.map((guarantee, index) => {

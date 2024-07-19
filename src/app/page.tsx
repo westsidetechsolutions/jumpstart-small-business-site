@@ -8,40 +8,41 @@ import CopyWithCallToActions from "./components/copyWithCallToAction";
 import Features from "./components/features";
 import Guarantees from "./components/guaranteeCards";
 import LinkButton from "./components/linkButton";
+import Section from "./components/section";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <section>
+      <Section>
         <Hero />
-      </section>
-      <section>
+      </Section>
+      <Section theme="wsts-secondary">
         <CopyWithCallToActions />
-      </section>
-      <section id="features">
+      </Section>
+      <Section id="features">
         <Features />
-      </section>
-      <section id="feature-video">
+      </Section>
+      <Section id="feature-video">
         <h2 className="text-primary">Discover How Jumpstart Small Business Works</h2>
-      </section>
-      <section id="how-it-works">
+      </Section>
+      <Section id="how-it-works">
         <Steps />
-      </section>
-      <section id="testimonials">
+      </Section>
+      {/*<Section id="testimonials">*/}
         {/*<Testimonials />*/}
-      </section>
-      <section id="pricing">
+      {/*</Section>*/}
+      <Section id="pricing">
         <Pricing />
-      </section>
-      <section id="faq">
+      </Section>
+      <Section id="faq">
         <Faqs />        
-      </section>
-      <section id="guarantees">
+      </Section>
+      <Section id="guarantees">
         <Guarantees />
-      </section>
-      <section id="cta-1" className="items-center justify-center flex my-24">
+      </Section>
+      <Section id="cta-1" divClasses="items-center justify-center flex my-24">
         <LinkButton link="#pricing" text="Ready to try it out?" />
-      </section>
+      </Section>
     </main>
   );
 }

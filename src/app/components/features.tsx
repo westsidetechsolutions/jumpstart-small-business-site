@@ -19,7 +19,7 @@ const Feature = (props: FeatureProps) => {
                 <MaterialSymbol classes="text-primary" symbol={feature.icon}/>
             </div>
             <h3 className="mb-2 text-xl font-bold text-primary">{feature.title}</h3>
-            <p className="text-secondary">
+            <p className="text-base-content">
                 {feature.description}
             </p>
         </div>
@@ -81,7 +81,7 @@ const Features = () => {
                 <h2 className="mb-4 text-primary">
                     Guidance and Deliverables for your Business
                 </h2>
-                <p className="text-secondary">
+                <p className="text-base-content">
                     I go the extra mile to make sure the quality of what I deliver is the best possible
                 </p>
             </div>

@@ -6,7 +6,7 @@ const Hero = () => {
             <div className="flex flex-wrap items-center mx-auto max-w-7xl">
                 <div className="flex flex-col items-start mt-12 mb-16 text-left lg:flex-grow lg:w-1/2 md:mb-0 xl:mt-0">
                     <h1 className="mb-8 text-4xl font-bold leading-none tracking-tighter text-primary md:text-7xl lg:text-5xl">Effortless Small Business Launch Packages</h1>
-                    <p className="mb-8 text-base leading-relaxed text-left text-secondary">
+                    <p className="mb-8 text-base leading-relaxed text-left text-base-content">
                         Simplify your startup journey with easy-to-choose packages. Includes a custom landing page, marketing plan, branding essentials and more tailored to meet your unique business needs.
                     </p>
                     <div className="mt-0 lg:mt-6 max-w-7xl sm:flex">

@@ -18,6 +18,13 @@ section {
   width: 100%;
 }
 
+section:not(.w-full) > div:first-of-type {
+  max-width: 68.75rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 body {
   font-family: 'Inter Variable', sans-serif;
     color: rgb(var(--foreground-rgb));
@@ -34,32 +41,25 @@ nav {
 }
 
 h1 {
-  @apply text-4xl font-bold mb-4 font-header;
+  @apply text-4xl font-bold mb-4 font-header text-primary;
 }
 h2 {
-  @apply text-3xl font-bold mb-4 font-header;
+  @apply text-3xl font-bold mb-4 font-header text-primary;
 }
 h3 {
-  @apply text-2xl font-bold mb-4 font-header;
+  @apply text-2xl font-bold mb-4 font-header text-primary;
 }
 h4 {
-  @apply text-xl mb-4;
+  @apply text-xl mb-4 text-primary;
 }
 h5 {
-  @apply text-lg mb-4;
+  @apply text-lg mb-4 text-primary;
 }
 h6 {
-  @apply text-base mb-4;
+  @apply text-base mb-4 text-primary;
 }
 p {
-  @apply text-base mb-4;
-}
-
-section {
-  max-width: 68.75rem;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  @apply text-base mb-4 text-base-content;
 }
 
 .material-symbols-rounded {

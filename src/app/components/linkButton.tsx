@@ -5,7 +5,7 @@ type LinkButtonProps = {
 
 const LinkButton = ({ link, text }: LinkButtonProps) => {
     return (
-        <a href={link} className="btn btn-primary transform transition duration-300 hover:bg-secondary hover:scale-105">
+        <a href={link} className="btn btn-primary transform transition duration-300 hover:scale-105">
             {text}
         </a>
     )

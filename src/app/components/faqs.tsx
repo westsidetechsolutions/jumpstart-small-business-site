@@ -15,7 +15,7 @@ const Faq = ({ question, answer} : FaqProps) => {
                         {question}
                     </span>
                 </h3>
-                <p className="text-secondary">
+                <p className="text-base-content">
                     {answer}
                 </p>
             </div>

@@ -23,7 +23,9 @@ const Step = (props: StepProps) => {
         </div>
         <div className={`${position} mb-10 text-primary`}>
             <div className="text-lg font-black text-primary">{props.step.title}</div>
-            {props.step.explanation}
+            <span className="text-base-content">
+                {props.step.explanation}
+            </span>
         </div>
         <hr />
     </li>
