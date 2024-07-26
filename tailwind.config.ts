@@ -7,13 +7,6 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  safelist: [
-    "-skew-y-1",
-    "-skew-y-2",
-    "-skew-y-3",
-    "-skew-y-6",
-    "-skew-y-12",
-  ],
   theme: {
     extend: {
       fontFamily: {
@@ -35,7 +28,7 @@ const config: Config = {
           'accent-content': '#ffffff',     // White for accent text content
           'neutral': '#003333',            // Monitor Black
           'neutral-content': '#ffffff',    // White for neutral text content
-          'base-100': '#ffffff',           // White background
+          'base-100': '#f0fafb',           // White background
           'base-content': '#000000',           // White background
           'info': '#669999',               // Light Teal
           'info-content': '#ffffff',       // White for info text content

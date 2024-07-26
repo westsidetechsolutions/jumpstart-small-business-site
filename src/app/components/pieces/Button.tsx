@@ -9,7 +9,7 @@ export interface ButtonProps {
   
   const Button: React.FC<ButtonProps> = ({ link, text }) => {
     return (
-      <a href={link} className="btn btn-primary transform transition duration-300 hover:scale-105">
+      <a href={link} className="btn btn-primary btn-lg transform transition duration-300 hover:scale-105">
         {text}
       </a>
     );

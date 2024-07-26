@@ -11,6 +11,7 @@ import "@fontsource/material-symbols-rounded";
 import "./globals.css";
 import Header from "./components/headers/header";
 import Footer from "./components/footers/footer";
+import AosComponent from "./components/pieces/aos";
 
 
 export const metadata: Metadata = {
@@ -27,6 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
+        <AosComponent />
         {children}
         <Footer />
       </body>

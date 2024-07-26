@@ -1,15 +1,15 @@
 import Image from "next/image";
 import Hero from "./components/heros/hero";
 import Faqs from "./components/features/faqs/faqs";
-import Testimonials from "./components/testimonials";
+//import Testimonials from "./components/testimonials";
 import Steps from "./components//features/steps";
 import CopyWithCallToActions from "./components/callToActions/copyWithCallToAction";
-import LinkButton from "./components/pieces/Button";
 import Section, { Skew } from "./components/pieces/section";
 import PricingSection from "./sections/pricing";
 import { HorizontalPosition } from "./components/types/position";
 import FeaturesSection from "./sections/features";
 import GuaranteesSection from "./sections/guarantees";
+import FAQsWithAccordion from "./components/features/faqs/faqsWithAccording";
 
 const processSteps = [
   {
@@ -130,7 +130,7 @@ export default function Home() {
       <Section>
         <Hero />
       </Section>
-      <Section sectionClasses="squiggly-top" theme="wsts-secondary">
+      <Section sectionClasses="squiggly-top" theme="wsts-secondary" divId="cta-div">
         <CopyWithCallToActions copy={callToActionCopy} buttonText="Get Started" buttonLink="#pricing" />
       </Section>
       <Section id="features">
@@ -148,14 +148,11 @@ export default function Home() {
       <Section id="pricing">
         <PricingSection />
       </Section>
-      <Section id="guarantees" theme="wsts-secondary">
+      <Section id="guarantees" theme="wsts-secondary" skew={Skew["-y2"]}>
         <GuaranteesSection />
       </Section>
       <Section id="faq">
-        <Faqs faqs={faqs}/>
-        <div id="cta-1" className="items-center justify-center flex my-24">
-          <LinkButton link="#pricing" text="Ready to try it out?" />
-        </div>
+        <FAQsWithAccordion faqs={faqs}/>
       </Section>
     </main>
   );

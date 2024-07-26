@@ -1,4 +1,5 @@
 import CardsWithIconInCorner from "../components/features/cardWithIconInCorner";
+import LinkButton from "../components/pieces/Button";
 
 const guarantees = [
     {
@@ -27,8 +28,11 @@ const GuaranteesSection = () => {
     return (
         <>
             <h2 className="text-primary">My Guarantees to You</h2>
-            <p className="mb-12">I stand by the quality and effectiveness of these services. Here are my promises to ensure your satisfaction and peace of mind.</p>
+            <p className="!mb-24">I stand by the quality and effectiveness of these services. Here are my promises to ensure your satisfaction and peace of mind.</p>
             <CardsWithIconInCorner cards={guarantees} />
+            <div id="cta-1" className="items-center justify-center flex !mt-24">
+                <LinkButton link="#pricing" text="Ready to try it out?" />
+            </div>
         </>
     )
 }
