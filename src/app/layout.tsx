@@ -9,8 +9,8 @@ import "@fontsource/material-symbols-rounded";
 
 
 import "./globals.css";
-import Header from "./components/header";
-import Footer from "./components/footer";
+import Header from "./components/headers/header";
+import Footer from "./components/footers/footer";
 
 
 export const metadata: Metadata = {

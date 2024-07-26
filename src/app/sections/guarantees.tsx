@@ -1,22 +1,4 @@
-import MaterialSymbol from "./materialSymbol"
-
-type GuaranteeProps = {
-    title: string,
-    description: string,
-    symbol: string,
-};
-
-const Guarantee = ({ title, description, symbol } : GuaranteeProps) => {
-    return (
-        <div className="w-80 bg-white p-6 rounded-lg shadow-md">
-            <MaterialSymbol classes="text-primary" symbol={symbol} size={40} />
-            <h3 className="text-xl font-semibold mt-4">{title}</h3>
-            <p className="mt-2">
-                {description}
-            </p>
-        </div>
-    )
-}
+import CardsWithIconInCorner from "../components/features/cardWithIconInCorner";
 
 const guarantees = [
     {
@@ -39,20 +21,16 @@ const guarantees = [
         symbol: "settings",
         description: "Your landing page and branding will be fully customized to reflect your unique business needs and goals.",
     },
-];
+  ];
 
-const Guarantees = () => {
+const GuaranteesSection = () => {
     return (
         <>
             <h2 className="text-primary">My Guarantees to You</h2>
             <p className="mb-12">I stand by the quality and effectiveness of these services. Here are my promises to ensure your satisfaction and peace of mind.</p>
-            <div className="flex flex-wrap justify-center gap-8">
-                {guarantees.map((guarantee, index) => {
-                    return <Guarantee {...guarantee} key={`guarantee-${index}`} />
-                })}
-            </div>
+            <CardsWithIconInCorner cards={guarantees} />
         </>
     )
 }
 
-export default Guarantees;
+export default GuaranteesSection;

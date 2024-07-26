@@ -1,14 +1,128 @@
 import Image from "next/image";
-import Hero from "./components/hero";
-import Faqs from "./components/faqs";
+import Hero from "./components/heros/hero";
+import Faqs from "./components/features/faqs/faqs";
 import Testimonials from "./components/testimonials";
-import Steps from "./components/steps";
-import Pricing from "./components/pricing";
-import CopyWithCallToActions from "./components/copyWithCallToAction";
-import Features from "./components/features";
-import Guarantees from "./components/guaranteeCards";
-import LinkButton from "./components/linkButton";
-import Section from "./components/section";
+import Steps from "./components//features/steps";
+import CopyWithCallToActions from "./components/callToActions/copyWithCallToAction";
+import LinkButton from "./components/pieces/Button";
+import Section, { Skew } from "./components/pieces/section";
+import PricingSection from "./sections/pricing";
+import { HorizontalPosition } from "./components/types/position";
+import FeaturesSection from "./sections/features";
+import GuaranteesSection from "./sections/guarantees";
+
+const processSteps = [
+  {
+      title: "Initial consultation",
+      explanation: "The first step in launching your business is a consultation call. (need to detail what will happen in the call and what we hope to accomplish.",
+      position: HorizontalPosition.left,
+      symbol: "partner_exchange",
+  },
+  {
+      title: "Wireframe of your landing page",
+      explanation: "I will create a very basic wireframe of your landing page with explanations for each section. This will be a simple overview to make sure that we are properly conveying the message of your business to your target market.",
+      position: HorizontalPosition.right,
+      symbol: "web_asset",
+  },
+  {
+      title: "Marketing Strategy Development",
+      explanation: "Next, a marketing plan is created for your business. This marketing plan will cover may different topics, such as some ideas for unique selling points, an in depth swot analysis, buyer persona examples and walking through the marketing funnel with a unique strategy.",
+      position: HorizontalPosition.left,
+      symbol: "groups",
+  },
+  {
+      title: "Site design and development",
+      explanation: "Once the wireframe is approved, I will craft a custom design for your site and send that over for approval once more. Once you are happy with the design, the landing page will be developed.",
+      position: HorizontalPosition.right,
+      symbol: "web",
+  },
+  {
+      title: "Launch",
+      explanation: "The site is developed and ready for launch! The code will either be delivered or I will set the site live!",
+      position: HorizontalPosition.left,
+      symbol: "rocket_launch",
+  },
+  {
+      title: "Promotion",
+      explanation: "Finally, I'll create and edit a video showcasing your business. I'll talk about what makes it so great and share the video on all of my social media channels.",
+      position: HorizontalPosition.right,
+      symbol: "play_arrow",
+  },
+];
+
+const faqs = [
+  {
+      question: "How long does it take to complete the Jumpstart Small Business package?",
+      answer:"I don't make any guarantees on the timeline of the project because I am just one person, but one of my selling points is a speedy turnaround. I should be able to have everything done in 2-4 weeks. Sometimes, it may be even faster!",
+  },
+  {
+    question: "What will you need from me?",
+    answer: "You'll need to have a domain for the site and any pictures and videos as well.",
+  },
+  {
+      question: "What makes Jumpstart Small Business different from other business launch services?",
+      answer: "When I created Jumpstart Small Business, I thought of everything I wish I'd had when I started a business. There are many services that can help you create just a landing page for a similar price, but I include all of these services as well that would have greatly helped me when I started a business!",
+  },
+  {
+      question: "What if I'm not satisfied with the services?",
+      answer: "I guarantee satisfaction with the services. If for some reason you still are not happy 30 days after the delivery, I'll make it right or offer a full refund.",
+  },
+  {
+      question: "How do you ensure the landing page is optimized for mobile devices?",
+      answer: "As a software engineer, I have many years' experience optimizing websites for different layouts across different devices. I use a mobile-first development mindset, so it always looks good on the go.",
+  },
+  {
+      question: "Can I request additional customizations after the landing page is completed?",
+      answer: "As many as you'd like. I want you to love your new site!",
+  },
+  {
+      question: "What kind of results can I expect from the marketing plan?",
+      answer: "The results of the marketing plan will be dependent upon the information I receive about your business during our initial strategy meeting. It will have some cool ideas and strategies for you to grow your business.",
+  },
+  {
+      question: "Can you help with SEO and online marketing beyond the initial setup?",
+      answer: "Yes. I don't offer SEO services quite yet, but I can help with marketing outside of these packages",
+  },
+  {
+      question: "Can I upgrade the site to more pages or use a content management system?",
+      answer: "Absolutely. These packages are for a landing page only, but outside of these packages, we can come to an agreement on adding more pages, connecting to a CMS or whatever else your needs might be!",
+  },
+  {
+      question: "Do you provide domain registration and hosting services?",
+      answer: "You'll have to provide a domain for this and if I am setting up your site, I'll need access to your registrar. I can host your landing page for free forever!",
+  },
+  {
+      question: "Are there any hidden fees or subscriptions?",
+      answer: "No hidden fees, no subscriptions. Its a one-time payment as you see above and that's it!",
+  },
+  {
+      question: "Can I use my existing domain and hosting provider?",
+      answer: "We can use your existing domain and you can use whatever hosting platform you'd like, or I can host it for free with the Pro or Elite Packages.",
+  },
+  {
+      question: "What if I want to make a change to my website after the project is completed?",
+      answer: "Once the page is complete, changes to the page can be made as an additional service.",
+  },
+  {
+      question: "Do you offer any analytics or performance tracking for the landing page?",
+      answer: "I can set this up at your request.",
+  },
+  {
+      question: "Is there a contract or long-term commitment required?",
+      answer: "No contract and no commitment. Its a one-time payment and the site is yours forever!",
+  },
+];
+
+const callToActionCopy = `
+<h2>
+    What is Jumpstart Small Business?
+</h2>
+<p>
+    Jumpstart Small Business is an affordable collection of services that I wished that I had when I started my business, such as a tailored landing page with a custom design, a marketing plan specific to your business, a bespoke branding kit with professional social media banners and more.
+</p>
+<p>
+    Designed specifically for new entrepreneurs and small businesses, Jumpstart Small Business is the ultimate starter kit that provides everything you need to launch your business successfully and affordably. Experience the ease of having a dedicated team handle your business setup, allowing you to focus on what you do best.
+</p>`;
 
 export default function Home() {
   return (
@@ -16,32 +130,32 @@ export default function Home() {
       <Section>
         <Hero />
       </Section>
-      <Section theme="wsts-secondary">
-        <CopyWithCallToActions />
+      <Section sectionClasses="squiggly-top" theme="wsts-secondary">
+        <CopyWithCallToActions copy={callToActionCopy} buttonText="Get Started" buttonLink="#pricing" />
       </Section>
       <Section id="features">
-        <Features />
+        <FeaturesSection />
       </Section>
-      <Section id="feature-video">
-        <h2 className="text-primary">Discover How Jumpstart Small Business Works</h2>
-      </Section>
+      {/*<Section id="feature-video">*/}
+      {/*</Section>*/}
       <Section id="how-it-works">
-        <Steps />
+        <h2 className="text-primary">Discover How Jumpstart Small Business Works</h2>
+        <Steps steps={processSteps}/>
       </Section>
       {/*<Section id="testimonials">*/}
         {/*<Testimonials />*/}
       {/*</Section>*/}
       <Section id="pricing">
-        <Pricing />
+        <PricingSection />
+      </Section>
+      <Section id="guarantees" theme="wsts-secondary">
+        <GuaranteesSection />
       </Section>
       <Section id="faq">
-        <Faqs />        
-      </Section>
-      <Section id="guarantees">
-        <Guarantees />
-      </Section>
-      <Section id="cta-1" divClasses="items-center justify-center flex my-24">
-        <LinkButton link="#pricing" text="Ready to try it out?" />
+        <Faqs faqs={faqs}/>
+        <div id="cta-1" className="items-center justify-center flex my-24">
+          <LinkButton link="#pricing" text="Ready to try it out?" />
+        </div>
       </Section>
     </main>
   );
@@ -50,9 +164,16 @@ export default function Home() {
 
 /*
  * To do:
- * 1. Connect Stripe
- * 2. Add payment badges to pricing part
- * 3. Record and add videos
- * 4. Get domain
+ * 1. Get domain
  * 
+ * For Greyson:
+ * 1. How does the page look? I kind of have the info up that I want, but I know its needs more.
+ * 2. How would you decide theme colors? (with my theme and in general)
+ * 3. What (subtle) animations does this need? Does it need interactive elements?
+ * 4. What else would you change?
+ * 5. Which elements should have the "heading" font?
+ * 6. How much spacing should I have between sections? Between blocks within sections?
+ * 7. Sizing on headings and text
+ * 8. Do you think I need a logo for this?
+ * 9. What about the buttons? Other low contrast colors (look at lighthouse test) (This is related to creating a theme, related to #2).
   */

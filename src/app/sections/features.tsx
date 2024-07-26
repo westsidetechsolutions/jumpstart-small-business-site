@@ -1,30 +1,5 @@
-import MaterialSymbol from "./materialSymbol";
-
-type FeatureProps = {
-    feature: {
-        title: string,
-        description: string,
-        icon: string,
-    }
-};
-
-const Feature = (props: FeatureProps) => {
-    const { feature } = props;
-    return (
-        <div>
-            <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-content lg:h-12 lg:w-12">
-                {/*<svg className="w-5 h-5 text-primary lg:w-6 lg:h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">*/}
-                {/*    <path fillRule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>*/}
-                {/*</svg>*/}
-                <MaterialSymbol classes="text-primary" symbol={feature.icon}/>
-            </div>
-            <h3 className="mb-2 text-xl font-bold text-primary">{feature.title}</h3>
-            <p className="text-base-content">
-                {feature.description}
-            </p>
-        </div>
-    )
-}
+import Features from "../components/features/features";
+import HtmlRenderer from "../components/pieces/htmlRenderer";
 
 const features = [
     {
@@ -72,24 +47,23 @@ const features = [
         description: "I know what its like to run a small business, and everything in this offer is something that I wish I'd had when I started my business.",
         icon: "partner_exchange",
     },
-]
+];
 
-const Features = () => {
+const html = `
+<h2>
+    Guidance and Deliverables for your Business
+</h2>
+<p>
+    I go the extra mile to make sure the quality of what I deliver is the best possible
+</p>`;
+
+const FeaturesSection = () => {
     return (
-        <div className="py-8 mx-auto sm:py-16">
-            <div className="max-w-screen-md mb-8 lg:mb-16">
-                <h2 className="mb-4 text-primary">
-                    Guidance and Deliverables for your Business
-                </h2>
-                <p className="text-base-content">
-                    I go the extra mile to make sure the quality of what I deliver is the best possible
-                </p>
-            </div>
-            <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-                {features.map(feature => (<Feature key={`feature-${feature.title}`} feature={feature} />))}
-            </div>
-        </div>
+        <>
+            <HtmlRenderer htmlString={html} />
+            <Features features={features} />
+        </>
     )
 }
 
-export default Features;
+export default FeaturesSection;

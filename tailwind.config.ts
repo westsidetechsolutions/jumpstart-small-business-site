@@ -7,6 +7,13 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    "-skew-y-1",
+    "-skew-y-2",
+    "-skew-y-3",
+    "-skew-y-6",
+    "-skew-y-12",
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -24,7 +31,7 @@ const config: Config = {
           'primary-content': '#ffffff',    // White for primary text content
           'secondary': '#FFCC33',          // Electric Gold
           'secondary-content': '#ffffff',  // White for secondary text content
-          'accent': '#186666',             // Circuit Board
+          'accent': '#669999',             // Circuit Board
           'accent-content': '#ffffff',     // White for accent text content
           'neutral': '#003333',            // Monitor Black
           'neutral-content': '#ffffff',    // White for neutral text content
@@ -44,11 +51,11 @@ const config: Config = {
       {
         'wsts-secondary': {                // Theme with white background
           'primary': '#FFCC33',            // Light Teal
-          'primary-content': '#669999',    // White for primary text content
+          'primary-content': '#000000',    // White for primary text content
           'secondary': '#003333',          // Electric Gold
           'secondary-content': '#ffffff',  // White for secondary text content
-          'accent': '#186666',             // Circuit Board
-          'accent-content': '#ffffff',     // White for accent text content
+          'accent': '#ffffff',             // Circuit Board
+          'accent-content': '#000000',     // White for accent text content
           'neutral': '#003333',            // Monitor Black
           'neutral-content': '#ffffff',    // White for neutral text content
           'base-100': '#669999',           // White background

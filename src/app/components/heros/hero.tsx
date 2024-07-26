@@ -1,4 +1,4 @@
-import LinkButton from "./linkButton";
+import LinkButton from "../pieces/Button";
 
 const Hero = () => {
     return (
