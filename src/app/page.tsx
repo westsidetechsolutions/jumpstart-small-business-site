@@ -10,6 +10,9 @@ import { HorizontalPosition } from "./components/types/position";
 import FeaturesSection from "./sections/features";
 import GuaranteesSection from "./sections/guarantees";
 import FAQsWithAccordion from "./components/features/faqs/faqsWithAccording";
+import ImageWithTextSideBySide from "./components/features/imageWithTextSideBySide";
+import appreciateIt from "./assets/images/appreciate-it.png"
+import { sizes } from "./components/types/sizes";
 
 const processSteps = [
   {
@@ -81,23 +84,23 @@ const faqs = [
   },
   {
       question: "Can you help with SEO and online marketing beyond the initial setup?",
-      answer: "Yes. I don't offer SEO services quite yet, but I can help with marketing outside of these packages",
+      answer: "Marketing services, including SEO are coming soon! I am waiting a bit until I know for sure I can do them correctly.",
   },
   {
-      question: "Can I upgrade the site to more pages or use a content management system?",
+      question: "Can I upgrade the site to more pages, use a content management system create an e-commerce integration, integrate with another system etc?",
       answer: "Absolutely. These packages are for a landing page only, but outside of these packages, we can come to an agreement on adding more pages, connecting to a CMS or whatever else your needs might be!",
   },
   {
       question: "Do you provide domain registration and hosting services?",
-      answer: "You'll have to provide a domain for this and if I am setting up your site, I'll need access to your registrar. I can host your landing page for free forever!",
+      answer: "You'll have to provide a domain for this and if I am setting up your site, I'll need access to your registrar.",
   },
   {
       question: "Are there any hidden fees or subscriptions?",
-      answer: "No hidden fees, no subscriptions. Its a one-time payment as you see above and that's it!",
+      answer: "No hidden fees, no subscriptions. Its a one-time payment as you see above and that's it! There are additional options for videos, hosting, help with marketing etc, but none are required for you to have a great site and strategy!",
   },
   {
       question: "Can I use my existing domain and hosting provider?",
-      answer: "We can use your existing domain and you can use whatever hosting platform you'd like, or I can host it for free with the Pro or Elite Packages.",
+      answer: "We can use your existing domain and you can use whatever hosting platform you'd like, or I can host it as an additional service.",
   },
   {
       question: "What if I want to make a change to my website after the project is completed?",
@@ -109,7 +112,7 @@ const faqs = [
   },
   {
       question: "Is there a contract or long-term commitment required?",
-      answer: "No contract and no commitment. Its a one-time payment and the site is yours forever!",
+      answer: "No contract and no commitment. Its a one-time payment and the site is yours forever! I can help with hosting, but if you get the Pro or Elite packages, it comes with one year free! Hosting with me is completely optional.",
   },
 ];
 
@@ -153,6 +156,22 @@ export default function Home() {
       </Section>
       <Section id="faq">
         <FAQsWithAccordion faqs={faqs}/>
+      </Section>
+      <Section id="final-cta">
+        <ImageWithTextSideBySide
+          imageSide={HorizontalPosition.left}
+          copy={"<h2>Join the Community of Successful Entrepreneurs!</h2> <p>You're almost there! You've seen how our tailored solutions can help you launch and grow your business with ease. Now, take the final step to ensure your business thrives. With our comprehensive packages, you’ll have everything you need to turn your vision into reality. Don't wait – start your journey to success today!</p>"}
+          image={{
+            alt: "Appreciate it",
+            size: sizes.large,
+            src: appreciateIt.src,
+          }}
+          imageFocus="center"
+          callToAction={{
+            text: "Get Started Now",
+            link: "#pricing",
+          }}
+        />
       </Section>
     </main>
   );

@@ -15,7 +15,7 @@ const guarantees = [
     {
         title: "No Hidden Fees Guarantee",
         symbol: "visibility_off",
-        description: "The price you see is the price you pay. There are no surprise charges or additional costs.",
+        description: "The price you see is the price you pay. There are no surprise charges or additional costs. There are optional additional services and upgrades, but none of them are required for any of these packages.",
     },
     {
         title: "Customization Guarantee",

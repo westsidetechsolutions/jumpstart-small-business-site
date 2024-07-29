@@ -17,7 +17,7 @@ const plans = [
         "price": "749",
         "features": [
             "Everything in \"Essentials\"",
-            "A year of hosting",
+            "A year of hosting for your landing page and setup by me",
             "A video by me overviewing and promoting your business, posted to all of my social media accounts",
             "\"Starting Your Business\" checklist",
         ],
@@ -43,10 +43,10 @@ const PricingSection = () => {
         <div className="py-8 lg:py-16">
             <div className="mx-auto mb-8 lg:mb-12">
                 <h2 className="mb-4 text-primary">
-                    Designed for business teams like yours
+                    Designed for Business Teams like yours
                 </h2>
                 <p className="mb-5 text-base-content">
-                    Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.
+                    Flexible packages with helpful services to start your online presence that fit your budget!
                 </p>
             </div>
             <Pricing plans={plans}/>

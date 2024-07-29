@@ -1,3 +1,4 @@
+import Button from "../pieces/Button";
 import HtmlRenderer from "../pieces/htmlRenderer";
 import { HorizontalPosition } from "../types/position";
 import { sizes } from "../types/sizes";
@@ -11,6 +12,10 @@ interface ImageWithTextSideBySideProps {
     imageSide: HorizontalPosition;
     copy: string;
     imageFocus: string;
+    callToAction?: {
+        text: string;
+        link: string;
+    }
 }
 
 const gridClasses = {
@@ -31,15 +36,19 @@ const imageSizes = {
 
 //We did not yet implement image focus
 
-const ImageWithTextSideBySide = ({ image, imageSide, copy }: ImageWithTextSideBySideProps) => {
+const ImageWithTextSideBySide = ({ image, imageSide, copy, callToAction }: ImageWithTextSideBySideProps) => {
     return (
         <div className="py-8 md:py-12">
             <div className="gap-8 items-center md:py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
                 <div className={`${imageSide == HorizontalPosition.left ? gridClasses['1'] : gridClasses['2']} ${imageSizes[image.size]}`}>
-                    <img className="object-cover w-full h-full" src={image.src} alt={image.alt} />
+                    <img className="object-contain w-full h-full" src={image.src} alt={image.alt} />
                 </div>
                 <div className={`mt-4 md:mt-0 ${imageSide == HorizontalPosition.left ? gridClasses['2'] : gridClasses['1']}`}>
                     <HtmlRenderer htmlString={copy} />
+                    {callToAction && <Button
+                        text={callToAction.text}
+                        link={callToAction.link}
+                    />}
                 </div>
             </div>
         </div>)

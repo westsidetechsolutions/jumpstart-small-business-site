@@ -45,7 +45,7 @@ const config: Config = {
         'wsts-secondary': {                // Theme with white background
           'primary': '#FFCC33',            // Light Teal
           'primary-content': '#000000',    // White for primary text content
-          'secondary': '#003333',          // Electric Gold
+          'secondary': '#669999',          // Electric Gold
           'secondary-content': '#ffffff',  // White for secondary text content
           'accent': '#ffffff',             // Circuit Board
           'accent-content': '#000000',     // White for accent text content

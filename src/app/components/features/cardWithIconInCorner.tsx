@@ -16,7 +16,7 @@ type CardsWithIconInCornerProps = {
 
 export const CardWithIconInCorner = ({ title, description, symbol } : CardWithIconInCornerProps) => {
     return (
-        <div className="w-80 bg-accent p-6 rounded-lg shadow-md">
+        <div className="w-full bg-accent p-6 rounded-lg shadow-md">
             <MaterialSymbol classes="text-secondary" symbol={symbol} size={40} />
             <h3 className="text-xl font-semibold text-secondary mt-4">{title}</h3>
             <p className="mt-2 text-accent-content">
