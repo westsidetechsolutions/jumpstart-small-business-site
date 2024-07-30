@@ -12,12 +12,12 @@ type CopyWithCallToActionProps = {
 
 const CopyWithCallToAction = ({ copy, buttonLink, buttonText } : CopyWithCallToActionProps) => {
     return (
-        <div className="py-8 sm:py-16">
+        <div>
             <div className="grid grid-cols-8">
                 <div className="col-span-8 md:col-span-6">
                     <HtmlRenderer htmlString={copy} />
                 </div>
-                <div className="col-span-8 md:col-span-2 flex flex-col justify-center items-center">
+                <div className="mt-12 col-span-8 md:col-span-2 flex flex-col justify-center items-center">
                     <LinkButton link={buttonLink} text={buttonText} />
                 </div>
             </div>

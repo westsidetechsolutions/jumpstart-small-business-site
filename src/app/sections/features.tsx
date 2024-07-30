@@ -60,7 +60,9 @@ const html = `
 const FeaturesSection = () => {
     return (
         <>
-            <HtmlRenderer htmlString={html} />
+            <div className="mb-20 md:mb-32">
+                <HtmlRenderer htmlString={html} />
+            </div>
             <Features features={features} />
         </>
     )
