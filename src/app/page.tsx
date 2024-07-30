@@ -14,6 +14,7 @@ import ImageWithTextSideBySide from "./components/features/imageWithTextSideBySi
 import appreciateIt from "./assets/images/appreciate-it.png"
 import { sizes } from "./components/types/sizes";
 
+
 const processSteps = [
   {
       title: "Initial consultation",
