@@ -161,11 +161,9 @@ export default function Home() {
         <ImageWithTextSideBySide
           imageSide={HorizontalPosition.left}
           copy={"<h2>Join the Community of Successful Entrepreneurs!</h2> <p>You're almost there! You've seen how our tailored solutions can help you launch and grow your business with ease. Now, take the final step to ensure your business thrives. With our comprehensive packages, you’ll have everything you need to turn your vision into reality. Don't wait – start your journey to success today!</p>"}
-          image={{
-            alt: "Appreciate it",
-            size: sizes.large,
-            src: appreciateIt.src,
-          }}
+          image={appreciateIt}
+          imageAlt="Appreciate it"
+          imageSize={sizes.large}
           imageFocus="center"
           callToAction={{
             text: "Get Started Now",

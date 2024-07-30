@@ -22,7 +22,7 @@ const Hero = () => {
                             <div className="absolute top-0 rounded-full bg-primary-content -left-4 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
                             <div className="absolute rounded-full bg-secondary-content -bottom-24 right-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
                             <div className="relative">
-                                <YoutubePlayer videoId="GXkEvXHS4Qk" autoPlay={false} title="Test title" />
+                                <YoutubePlayer videoId="GXkEvXHS4Qk" autoPlay={true} title="Test title" />
                             </div>
                         </div>
                     </div>

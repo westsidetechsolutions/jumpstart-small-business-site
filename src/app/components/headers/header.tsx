@@ -1,10 +1,11 @@
 import logo from "@/app/assets/logos/yellow-white-logo.png";
+import Image from "next/image";
 
 const Header = () => {
     return (
         <nav className="navbar bg-primary">
             <div className="navbar-start">
-                <img className="h-8 m-2" height="150" src={logo.src} about="Jumpstart Small Business Logo" />
+                <Image className="h-8 w-36 m-2" src={logo} alt="Jumpstart Small Business Logo" />
             </div>
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-primary-content">
