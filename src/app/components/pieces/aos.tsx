@@ -5,8 +5,6 @@ import { useEffect } from "react";
 
 const addAosAttributes = (selector: string, animation: string) => {
     const elements = document.querySelectorAll(selector);
-    console.log("elements");
-    console.log(elements);
     for (let i = 0; i < elements.length; i++) {
         elements[i].setAttribute("data-aos", animation)
     }
@@ -17,6 +15,8 @@ const AosComponent = () => {
         AOS.init({
             duration: 800
         });
+        console.log("AOS");
+        console.log(AOS);
         addAosAttributes(".timeline-start", "fade-right");
         addAosAttributes(".timeline-end", "fade-left");
         addAosAttributes("#cta-div", "fade-down");
