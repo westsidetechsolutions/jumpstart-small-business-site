@@ -11,7 +11,8 @@ const plans = [
             "Hand crafted landing page design and development",
             "6 months of hosting included for your landing page",
         ],
-        "link": "https://buy.stripe.com/test_dR65lA1tv5Ga4eY8wx",
+        //"link": "https://buy.stripe.com/test_dR65lA1tv5Ga4eY8wx",
+        "link": "https://buy.stripe.com/eVadTbfv77mBg6Y145",
     },
     {
         "planName": "Pro",
@@ -23,7 +24,8 @@ const plans = [
             "One year of hosting included for your landing page",
             "A video by me overviewing and promoting your business, posted to all of my social media accounts",
         ],
-        "link": "https://buy.stripe.com/test_14kbJY1tv6KedPy288",
+        //"link": "https://buy.stripe.com/test_14kbJY1tv6KedPy288",
+        "link": "https://buy.stripe.com/6oE2at2IlgXb4og6oq",
         "theme": "wsts-secondary",
     },
     {
@@ -36,7 +38,8 @@ const plans = [
             "Social media profile picture (of your branding)",
             "Social media banners for all platforms",
         ],
-        "link": "https://buy.stripe.com/test_5kA9BQ7RT8Sm26Q002",
+        //"link": "https://buy.stripe.com/test_5kA9BQ7RT8Sm26Q002",
+        "link": "https://buy.stripe.com/eVa3exciVayNcUM7ss",
     }
 ];
 
