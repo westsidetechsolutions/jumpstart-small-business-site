@@ -37,7 +37,7 @@ const imageSizes = {
 
 const ImageWithTextSideBySide = ({ image, imageAlt, imageSize, imageSide, copy, callToAction }: ImageWithTextSideBySideProps) => {
     return (
-        <div className="py-8 md:py-12">
+        <div>
             <div className="gap-8 items-center md:py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
                 <div className={`${imageSide == HorizontalPosition.left ? gridClasses['1'] : gridClasses['2']} ${imageSizes[imageSize]}`}>
                     <Image className="object-contain w-full h-full" src={image} alt={imageAlt} />

@@ -13,6 +13,7 @@ import Header from "./components/headers/header";
 import Footer from "./components/footers/footer";
 import AosComponent from "./components/pieces/aos";
 import Head from "next/head";
+import Script from "next/script";
 
 
 export const metadata: Metadata = {
@@ -27,9 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/40034998.js"></script>
-      </Head>
+      <Script
+        src="https://js.hs-scripts.com/40034998.js"
+        strategy="afterInteractive"
+      />
       <body>
         <Header />
         <AosComponent />
