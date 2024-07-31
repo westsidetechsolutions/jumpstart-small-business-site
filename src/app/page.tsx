@@ -55,7 +55,7 @@ const faqs = [
   },
   {
     question: "What will you need from me?",
-    answer: "You'll need to have a domain for the site and any pictures and videos as well.",
+    answer: "You'll need to have a domain for the site and any pictures and videos as well. I'll ask for a few other things on our onboarding call!",
   },
   {
     question: "What makes Jumpstart Small Business different from other business launch services?",
@@ -95,7 +95,7 @@ const faqs = [
   },
   {
     question: "Can I use my existing domain and hosting provider?",
-    answer: "We can use your existing domain and you can use whatever hosting platform you'd like. I offer to host your site for a year, and then after that, its a separate agreement.",
+    answer: "We can use your existing domain and you can use whichever hosting platform you'd like. I offer to host your site for free depending on the package for a specified time, and then after that, its a separate agreement.",
   },
   {
     question: "What if I want to make a change to my website after the project is completed?",
@@ -107,7 +107,7 @@ const faqs = [
   },
   {
     question: "Is there a contract or long-term commitment required?",
-    answer: "No contract and no commitment. Its a one-time payment and the site is yours forever! I include one year of hosting for free, but you can host this site wherever you'd like.",
+    answer: "No contract and no commitment. Its a one-time payment and the site is yours forever! I include hosting for free for a specified time depending on the package, but you can host this site wherever you'd like.",
   },
 ];
 
