@@ -31,7 +31,7 @@ const GuaranteesSection = () => {
             <p className="!mb-24">I stand by the quality and effectiveness of these services. Here are my promises to ensure your satisfaction and peace of mind.</p>
             <CardsWithIconInCorner cards={guarantees} />
             <div id="cta-1" className="items-center justify-center flex !mt-24">
-                <LinkButton link="#pricing" text="Ready to try it out?" />
+                <LinkButton link="#pricing-cards" text="Ready to try it out?" />
             </div>
         </>
     )

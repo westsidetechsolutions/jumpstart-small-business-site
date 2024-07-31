@@ -23,33 +23,27 @@ const processSteps = [
     symbol: "partner_exchange",
   },
   {
-    title: "Wireframe of your landing page",
-    explanation: "I will create a very basic wireframe of your landing page with explanations for each section. This will be a simple overview to make sure that we are properly conveying the message of your business to your target market.",
-    position: HorizontalPosition.right,
-    symbol: "web_asset",
-  },
-  {
     title: "Marketing Strategy Development",
-    explanation: "Next, a marketing plan is created for your business. This marketing plan will cover may different topics, such as some ideas for unique selling points, an in depth swot analysis, buyer persona examples and walking through the marketing funnel with a unique strategy.",
-    position: HorizontalPosition.left,
+    explanation: "Next, a marketing plan is created for your business. This marketing plan will cover may different topics, such as some ideas for unique selling points, an in depth swot analysis, buyer persona examples and walking through the marketing funnel with a unique strategy. This will also help us plan what the layout of the website will be like.",
+    position: HorizontalPosition.right,
     symbol: "groups",
   },
   {
     title: "Site design and development",
     explanation: "Once the wireframe is approved, I will craft a custom design for your site and send that over for approval once more. Once you are happy with the design, the landing page will be developed.",
-    position: HorizontalPosition.right,
+    position: HorizontalPosition.left,
     symbol: "web",
   },
   {
     title: "Launch",
     explanation: "The site is developed and ready for launch! The code will either be delivered or I will set the site live!",
-    position: HorizontalPosition.left,
+    position: HorizontalPosition.right,
     symbol: "rocket_launch",
   },
   {
     title: "Promotion",
     explanation: "Finally, I'll create and edit a video showcasing your business. I'll talk about what makes it so great and share the video on all of my social media channels.",
-    position: HorizontalPosition.right,
+    position: HorizontalPosition.left,
     symbol: "play_arrow",
   },
 ];
@@ -135,7 +129,7 @@ export default function Home() {
         <Hero />
       </Section>
       <Section sectionClasses="squiggly-top" theme="wsts-secondary" divId="cta-div">
-        <CopyWithCallToActions copy={callToActionCopy} buttonText="Get Started" buttonLink="#pricing" />
+        <CopyWithCallToActions copy={callToActionCopy} buttonText="Get Started" buttonLink="#pricing-cards" />
       </Section>
       <Section id="features">
         <FeaturesSection />
@@ -168,7 +162,7 @@ export default function Home() {
           imageFocus="center"
           callToAction={{
             text: "Get Started Now",
-            link: "#pricing",
+            link: "#pricing-cards",
           }}
         />
       </Section>

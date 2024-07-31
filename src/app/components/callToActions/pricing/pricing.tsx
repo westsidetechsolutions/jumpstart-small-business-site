@@ -49,7 +49,6 @@ export const PricingCard: React.FC<PricingCardProps>  = ({ planName, price, feat
             <div className="flex justify-center items-baseline my-8">
                 <span className="mr-2 text-5xl font-extrabold">${price}<span className="text-base">.99</span></span>
             </div>
-            {/* List */}
             <div className="h-full flex flex-col justify-between">
                 <ul role="list" className="mb-8 space-y-4 text-left">
                     {features.map((feature, index) => {
@@ -69,7 +68,7 @@ export const PricingCard: React.FC<PricingCardProps>  = ({ planName, price, feat
 
 const Pricing = ({ plans } : PricingProps) => {
     return (
-        <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
+        <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0" id="pricing-cards">
             {plans.map((plan, index) => {
                 return <PricingCard {...plan} key={`pricing-plan-${plan.planName}`} />;
             })}
