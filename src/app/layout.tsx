@@ -14,7 +14,7 @@ import Footer from "./components/footers/footer";
 import AosComponent from "./components/pieces/aos";
 import Head from "next/head";
 import Script from "next/script";
-
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Jumpstart Small Business",
@@ -28,6 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleAnalytics gaId="G-RYY19T9C5Z" />
       <Script
         src="https://js.hs-scripts.com/40034998.js"
         strategy="afterInteractive"
