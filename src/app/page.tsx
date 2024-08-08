@@ -125,7 +125,7 @@ const callToActionCopy = `
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
+    <>
       <Section>
         <Hero />
       </Section>
@@ -167,7 +167,7 @@ export default function Home() {
           }}
         />
       </Section>
-    </main>
+    </>
   );
 }
 

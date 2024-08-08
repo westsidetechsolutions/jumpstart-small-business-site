@@ -36,7 +36,9 @@ export default function RootLayout({
       <body>
         <Header />
         <AosComponent />
-        {children}
+        <main className="min-h-screen flex items-center justify-center flex-col w-full">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
