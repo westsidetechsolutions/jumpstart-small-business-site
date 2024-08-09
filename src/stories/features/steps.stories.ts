@@ -5,7 +5,7 @@ import { HorizontalPosition } from '@/app/components/types/position';
 const meta: Meta<typeof Steps> = {
   title: 'Features/Steps',
   component: Steps,
-  subcomponents: Step,
+  subcomponents: { Step },
   tags: ['autodocs'],
 };
 

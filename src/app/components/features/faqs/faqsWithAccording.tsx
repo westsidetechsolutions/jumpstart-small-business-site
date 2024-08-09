@@ -12,7 +12,7 @@ export type FaqsProps = {
     faqs: FaqProps[];
 }
 
-const Collapse = ({ question, answer }: FaqProps) => {
+export const Collapse = ({ question, answer }: FaqProps) => {
     return (
         <div className="collapse collapse-arrow bg-base-100 p-8 md:p-12">
             <input type="radio" name={`faq-prop-${question}`} />
