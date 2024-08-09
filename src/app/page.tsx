@@ -129,7 +129,7 @@ export default function Home() {
       <Section>
         <Hero />
       </Section>
-      <Section sectionClasses="squiggly-top" theme="wsts-secondary" divId="cta-div">
+      <Section skew={Skew["-y2"]} id="cta" theme="wsts-secondary" divId="cta-div">
         <CopyWithCallToActions copy={callToActionCopy} buttonText="Get Started" buttonLink="#pricing-cards" />
       </Section>
       <Section id="features">

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Header = () => {
     return (
-        <nav className="navbar bg-primary">
+        <nav className="navbar bg-primary fixed top-0 z-50">
             <div className="navbar-start">
                 <Image className="h-8 w-36 m-2" src={logo} alt="Jumpstart Small Business Logo" />
             </div>

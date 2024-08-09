@@ -12,11 +12,9 @@ const addAosAttributes = (selector: string, animation: string) => {
 
 const AosComponent = () => {
     useEffect(() => {
-        console.log("AOS");
-        console.log(AOS);
         addAosAttributes(".timeline-start", "fade-right");
         addAosAttributes(".timeline-end", "fade-left");
-        addAosAttributes("#cta-div", "fade-down");
+        //addAosAttributes("#cta", "fade-down");
         AOS.init({
             duration: 800
         });

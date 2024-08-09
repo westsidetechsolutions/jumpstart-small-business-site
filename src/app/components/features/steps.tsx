@@ -20,9 +20,9 @@ type StepsProps = {
 export const Step = ({ title, explanation, position, symbol }: StepProps) => {
     const positionClass = position === HorizontalPosition.left ? `timeline-start md:text-end` : `timeline-end`;
     return (
-        <li>
-        <div className="timeline-middle">
-            <MaterialSymbol symbol={symbol} />
+        <li className="mb-12">
+        <div className="timeline-middle mx-8">
+            <MaterialSymbol symbol={symbol} size={64} classes="text-primary" />
         </div>
         <div className={`${positionClass} mb-10 text-primary`}>
             <div className="text-lg font-black text-primary">{title}</div>
