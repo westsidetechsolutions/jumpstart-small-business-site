@@ -13,7 +13,7 @@ import FAQsWithAccordion from "./components/features/faqs/faqsWithAccording";
 import ImageWithTextSideBySide from "./components/features/imageWithTextSideBySide";
 import appreciateIt from "./assets/images/appreciate-it.png"
 import { sizes } from "./components/types/sizes";
-
+import FlyerTracker from "./components/FlyerTracker";
 
 const processSteps = [
   {
@@ -126,6 +126,7 @@ const callToActionCopy = `
 export default function Home() {
   return (
     <>
+      <FlyerTracker />
       <Section>
         <Hero />
       </Section>
